@@ -1,5 +1,5 @@
 
-_Making Change_: You’re given an unlimited supply of coins of denominations `d\_1, d\_2, . . . , d\_k` (where each `d\_i` is a positive integer), and a positive integer number `n`.
+_Making Change_: You’re given an unlimited supply of coins of denominations `d_1, d_2, . . . , d_k` (where each `d_i` is a positive integer), and a positive integer number `n`.
 
 Your goal is to give the amount n of money, using in total as few coins as possible.
 
