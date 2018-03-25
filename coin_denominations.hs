@@ -1,4 +1,4 @@
-
+import Debug.Trace (trace)
 
 greedyDenom :: [Int] -> Int -> [Int]
 greedyDenom [] n = if n == 0 then [] else error $ "Not possible"
@@ -20,3 +20,13 @@ pick n = pickOpt $ optDenom denoms n
 
 denoms :: [Int]
 denoms = reverse [1, 4, 5, 7]
+
+denom :: (Int, Int) -> [Int] -> Int
+denom (_, 0) _ = 0
+denom (0, _) _ = (maxBound :: Int) - 1000
+denom (i, j) di
+  | v > j = denom (i-1, j) di
+  | otherwise = min (denom (i-1, j) di) (1 + denom (i, j-v) di)
+  where v = di !! (i - 1)
+
+t s = denom (length xs, s) xs where xs = [100, 25, 10, 5, 1]
