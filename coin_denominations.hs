@@ -16,10 +16,10 @@ pickOpt (x:xs) = go xs x
   where go [] min = min
         go (y:ys) min = go ys (if length y < length min then y else min)
 
-pick n = pickOpt $ optDenom denoms n
+pick n = pickOpt $ optDenom [7, 5, 4, 1] n
 
-denoms :: [Int]
-denoms = reverse [1, 4, 5, 7]
+
+-- Step 2 algo
 
 denom :: (Int, Int) -> [Int] -> Int
 denom (_, 0) _ = 0

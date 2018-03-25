@@ -14,6 +14,7 @@ _Find_: a sequence of nonnegative integers `v_1, v_2, . . . , v_k` (where each `
 
 <details>
 	<summary>**Solution**</summary>
+
 _Step 1_: For `0 <= i <= k` and `0 <= j <= n`, define `A(i,j)` as the smallest number of coins required to pay the amount `j` when using only coins of denominations `d_1, ..., d_i`. (If it is possible to get a change for `j` using only `d_1, ..., d_i`, we say that `A(i, j) = Infinity`.) The optimal value is then `A(k, n)`.
 
 _Step 2_: `A(i, 0) = 0` for all `1 <= i <= k`, and `A(0, j) = Infinity` for all `0 <= j <= n`.
